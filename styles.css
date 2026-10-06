@@ -1,0 +1,98 @@
+/* Modelo de caja: las medidas incluyen borde y relleno. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Poppins", Arial, sans-serif; color: #263b2e; background-color: #f7f5ee; line-height: 1.6; }
+header { padding: 24px 6%; background-color: #224d38; color: white; }
+header p { margin: 0; }
+.marca { font-size: 1.8rem; font-weight: bold; }
+/* Grid distribuye nav y main como en el esquema. */
+.estructura { display: grid; grid-template-columns: 210px 1fr; max-width: 1200px; margin: auto; }
+nav { padding: 32px 20px; border-right: 1px solid #deded2; }
+nav ul { list-style: none; padding: 0; }
+nav li { margin-bottom: 12px; }
+a { color: #224d38; }
+nav a { display: block; padding: 10px; text-decoration: none; border-radius: 8px; }
+nav a:hover, nav a:focus-visible { background-color: #e4eadc; }
+main { min-width: 0; padding: 0 32px; }
+section { padding: 40px 0; border-bottom: 1px solid #deded2; scroll-margin-top: 20px; }
+/* Flexbox alinea el texto y la ilustración. */
+.presentacion { display: flex; align-items: center; gap: 20px; }
+.presentacion > div { flex: 1; }
+.presentacion img { width: 42%; height: auto; }
+h1 { font-size: 2.6rem; line-height: 1.15; margin: 12px 0; }
+h2 { font-size: 1.8rem; margin: 8px 0; }
+h3 { margin: 8px 0; }
+.etiqueta { font-size: 0.75rem; letter-spacing: 2px; color: #536647; font-weight: bold; }
+.boton { display: inline-block; background-color: #dfaa43; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+.boton:hover { background-color: #ecc16a; }
+.platos { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.platos > article { flex: 0 1 calc((100% - 32px) / 3); min-width: 0; }
+article { position: relative; padding: 20px; border: 1px solid #deded2; border-radius: 12px; background-color: white; }
+article span { font-size: 2rem; }
+article p { margin: 8px 0; }
+.precio { font-weight: bold; color: #224d38; }
+.tabla-contenedor { overflow-x: auto; margin-top: 28px; }
+table { width: 100%; border-collapse: collapse; background-color: white; }
+caption { text-align: left; font-weight: bold; padding-bottom: 10px; }
+th, td { border: 1px solid #deded2; padding: 12px; text-align: left; }
+thead { background-color: #e4eadc; }
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+ol { padding-left: 22px; }
+form { padding: 20px; border-radius: 12px; background-color: #e4eadc; }
+label { display: block; margin-top: 12px; font-weight: bold; }
+input, textarea { width: 100%; padding: 10px; border: 1px solid #899782; border-radius: 5px; font: inherit; }
+textarea { resize: vertical; }
+input:focus, textarea:focus { outline: 2px solid #224d38; outline-offset: 2px; }
+button { margin-top: 12px; padding: 12px; border: 0; border-radius: 5px; font: inherit; }
+button:disabled { color: #465345; background-color: #d1d8cc; cursor: not-allowed; }
+footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 6%; background-color: #224d38; color: white; }
+footer a { color: white; }
+/* Media queries: el menú pasa arriba y las tarjetas a una columna. */
+@media (max-width: 768px) {
+  .estructura { grid-template-columns: 1fr; }
+  nav { padding: 16px; border-right: 0; border-bottom: 1px solid #deded2; }
+  nav p { display: none; }
+  nav ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+  nav li { margin: 0; }
+  main { padding: 0 20px; }
+  .presentacion { flex-direction: column; align-items: flex-start; }
+  .presentacion img { width: 100%; max-width: 360px; align-self: center; }
+  h1 { font-size: 2rem; }
+  .contacto-grid { grid-template-columns: 1fr; }
+  .platos > article { flex-basis: 100%; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* Fotos e ingredientes: superposición con posicionamiento y hover. */
+.presentacion img { height: 290px; object-fit: cover; border-radius: 18px; }
+article { padding: 0; overflow: hidden; }
+.foto-plato { position: relative; margin: 0; height: 210px; overflow: hidden; }
+.foto-plato img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.25s; }
+.foto-plato figcaption { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 18px; background: linear-gradient(transparent, rgba(15, 35, 24, 0.95)); color: white; opacity: 0; transition: opacity 0.25s; }
+.foto-plato:hover figcaption, .foto-plato:focus figcaption { opacity: 1; }
+.foto-plato:hover img { transform: scale(1.05); }
+.foto-plato:focus-visible { outline: 3px solid #dfaa43; outline-offset: -3px; }
+.contenido-plato { padding: 18px; }
+article .veggie, article .tipo-plato { font-size: 0.7rem; font-weight: bold; letter-spacing: 1px; }
+.veggie { color: #2e6236; background-color: #e4eadc; padding: 4px 8px; border-radius: 10px; }
+@media (hover: none), (max-width: 768px) {
+  .foto-plato { height: auto; }
+  .foto-plato img { height: 230px; }
+  .foto-plato figcaption { position: static; opacity: 1; background: #224d38; padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .foto-plato img, .foto-plato figcaption { transition: none; }
+}
+
+/* Tres secciones principales: Productos, Reseñas y Contacto. */
+.presentacion { padding-bottom: 40px; }
+.menu { padding-top: 20px; }
+.resenas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.resena { padding: 20px; }
+.resena > p { color: #8a5b00; letter-spacing: 2px; }
+blockquote { margin: 12px 0; }
+@media (max-width: 768px) {
+  .resenas-grid { grid-template-columns: 1fr; }
+}
+
+button[type="submit"] { background-color: #dfaa43; color: #263b2e; font-weight: 600; cursor: pointer; }
+button[type="submit"]:hover { background-color: #ecc16a; }

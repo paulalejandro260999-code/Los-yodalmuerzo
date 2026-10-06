@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Yodalmuerzos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <p class="marca">Los Yodalmuerzos <span aria-hidden="true">🍴</span></p>
+    <p>¡Que el sabor te acompañe!</p>
+  </header>
+  <div class="estructura">
+    <nav aria-label="Navegación principal">
+      <p>Conocé nuestra cocina</p>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Productos · Menú</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="productos" aria-label="Productos y presentación">
+      <div id="inicio" class="presentacion">
+        <div>
+          <p class="etiqueta">CASERO · RICO · PRÁCTICO</p>
+          <h1>Al hambre, sabor darle debes.</h1>
+          <p>Platos caseros y viandas para acompañarte durante la semana. Elegí tu favorito y conocé nuestras propuestas.</p>
+          <a class="boton" href="#menu">Ver el menú</a>
+        </div>
+        <img src="img/portada.jpg" alt="Almuerzo real con pastas y ensalada fresca" width="360" height="300">
+      </div>
+      <div id="menu" class="menu">
+        <p class="etiqueta">HECHO CON GANAS</p>
+        <h2>Menú semanal</h2>
+        <p>Pasá el cursor sobre cada foto para descubrir sus ingredientes.</p>
+        <div class="platos">
+          <article>
+            <figure class="foto-plato" tabindex="0" aria-label="Ingredientes de Pollo con arroz" aria-describedby="ingredientes-pollo">
+              <img src="img/pollo.jpg" alt="Fotografía de pollo con arroz" width="600" height="400" loading="lazy">
+              <figcaption id="ingredientes-pollo">Pollo, arroz, arvejas y morrón. Un clásico casero para recargar energías.</figcaption>
+            </figure>
+            <div class="contenido-plato">
+              <span class="tipo-plato">CASERO</span>
+              <h3>Pollo con arroz</h3><p class="precio">$7.500</p>
+            </div>
+          </article>
+          <article>
+            <figure class="foto-plato" tabindex="0" aria-label="Ingredientes de Ensalada completa" aria-describedby="ingredientes-ensalada">
+              <img src="img/ensalada.jpg" alt="Fotografía de ensalada completa" width="600" height="400" loading="lazy">
+              <figcaption id="ingredientes-ensalada">Hojas verdes, zanahoria, verduras y garbanzos. Fresca, colorida y liviana.</figcaption>
+            </figure>
+            <div class="contenido-plato">
+              <span class="veggie">VEGGIE</span>
+              <h3>Ensalada completa</h3><p class="precio">$6.500</p>
+            </div>
+          </article>
+          <article>
+            <figure class="foto-plato" tabindex="0" aria-label="Ingredientes de Pastas con salsa" aria-describedby="ingredientes-pastas">
+              <img src="img/pastas.jpg" alt="Fotografía de pastas con salsa" width="600" height="400" loading="lazy">
+              <figcaption id="ingredientes-pastas">Spaghetti, salsa de tomate y perejil. Sabor casero en cada bocado.</figcaption>
+            </figure>
+            <div class="contenido-plato">
+              <span class="tipo-plato">CASERO</span>
+              <h3>Pastas con salsa</h3><p class="precio">$7.000</p>
+            </div>
+          </article>
+          <article>
+            <figure class="foto-plato" tabindex="0" aria-label="Ingredientes de Burritos veggie" aria-describedby="ingredientes-burritos">
+              <img src="img/burritos.jpg" alt="Fotografía de burritos veggie" width="600" height="400" loading="lazy">
+              <figcaption id="ingredientes-burritos">Tortilla de trigo, arroz, porotos, maíz, tomate y morrón. Todo el sabor en un burrito.</figcaption>
+            </figure>
+            <div class="contenido-plato">
+              <span class="veggie">VEGGIE</span>
+              <h3>Burritos veggie</h3><p class="precio">$7.200</p>
+            </div>
+          </article>
+          <article>
+            <figure class="foto-plato" tabindex="0" aria-label="Ingredientes de Ensalada con nueces" aria-describedby="ingredientes-nueces">
+              <img src="img/nueces.jpg" alt="Fotografía de ensalada con nueces" width="600" height="400" loading="lazy">
+              <figcaption id="ingredientes-nueces">Rúcula, tomates cherry, nueces y aderezo de oliva y limón. Frescura con un toque crocante.</figcaption>
+            </figure>
+            <div class="contenido-plato">
+              <span class="veggie">VEGGIE</span>
+              <h3>Ensalada con nueces</h3><p class="precio">$6.800</p>
+            </div>
+          </article>
+        </div>
+        <div class="tabla-contenedor">
+          <table>
+            <caption>Organizá tus almuerzos</caption>
+            <thead><tr><th scope="col">Plan</th><th scope="col">Incluye</th><th scope="col">Precio de ejemplo</th></tr></thead>
+            <tbody><tr><th scope="row">Individual</th><td>1 almuerzo</td><td>Desde $6.500</td></tr><tr><th scope="row">Semanal</th><td>5 viandas</td><td>$32.000</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      </section>
+      <section id="resenas">
+        <p class="etiqueta">LA COMUNIDAD YODA</p>
+        <h2>Reseñas</h2>
+        <p>Opiniones ficticias de ejemplo para mostrar el diseño de esta sección.</p>
+        <div class="resenas-grid">
+          <article class="resena"><p aria-label="5 de 5 estrellas">★★★★★</p><h3>María · Ejemplo</h3><blockquote>El pollo con arroz me resolvió el almuerzo. ¡Bien casero!</blockquote></article>
+          <article class="resena"><p aria-label="5 de 5 estrellas">★★★★★</p><h3>Lucas · Ejemplo</h3><blockquote>Los burritos veggie tienen mucho sabor. Volvería a elegirlos.</blockquote></article>
+          <article class="resena"><p aria-label="4 de 5 estrellas">★★★★☆</p><h3>Camila · Ejemplo</h3><blockquote>La ensalada con nueces es fresca y crocante. Una buena opción.</blockquote></article>
+        </div>
+      </section>
+      <section id="contacto">
+        <p class="etiqueta">CHARLEMOS</p>
+        <h2>Consultanos por tus viandas</h2>
+        <div class="contacto-grid">
+          <div><h3>¿Cómo sería el pedido?</h3><ol><li>Elegí tus platos.</li><li>Consultá disponibilidad.</li><li>Coordiná retiro o entrega.</li></ol><p>Lunes a viernes · 11:00 a 15:00</p><p>Zona de entrega: a definir.</p></div>
+          <!-- Formspree recibe la consulta mediante POST. -->
+          <form action="https://formspree.io/f/xbgddgnb" method="POST">
+            <label for="nombre">Nombre</label><input id="nombre" name="name" autocomplete="name" type="text" placeholder="Tu nombre" required>
+            <label for="email">Correo electrónico</label><input id="email" name="email" autocomplete="email" type="email" placeholder="nombre@ejemplo.com" required>
+            <label for="consulta">Mensaje</label><textarea id="consulta" name="message" rows="4" placeholder="¿Qué te gustaría pedir?" required></textarea>
+            <button type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer><p>Los Yodalmuerzos</p><a href="#inicio">Volver al inicio ↑</a></footer>
+</body>
+</html>
